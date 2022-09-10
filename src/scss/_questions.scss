@@ -1,0 +1,64 @@
+@use './vars' as *;
+@use './mix' as *;
+
+#questions {
+  padding: 50px 0;
+  .headings {
+    width: 500px;
+    max-width: 100%;
+    text-align: center;
+    margin : 2.5rem auto;
+    .title {
+      color: $heading-primer-color;
+    }
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1 , 1fr);
+    align-items: baseline;
+    @media (min-width: $media-tab) {
+      grid-template-columns: repeat(2 , 1fr);
+    }
+    gap: 1rem;
+    .question {
+      background-color: #fff;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      .title {
+        position: relative;
+        padding: 10px 20px;
+        color: $heading-primer-color;
+        font-size: 1.3rem;
+        font-weight: 500;
+        cursor: pointer;
+        text-transform: capitalize;
+        margin: 0;
+        @include flex(space-between, center);
+        .icon {
+          transition: 0.5s;
+        }
+        &.up {
+          .icon {
+            transform: rotate(360deg);
+          }
+        }
+      }
+      .content {
+        height: auto;
+        padding: 10px 20px;
+        border-top: 1px solid $paragraph-primery-color;
+        p {
+          color: $paragraph-primery-color;
+          font-size: 1.1rem;
+          line-height: 1.5;
+        }
+        &.show {
+          display: block;
+          
+        }
+        &.hide {
+          display: none;
+        }
+      }
+    }
+  }
+}

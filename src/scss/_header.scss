@@ -1,0 +1,37 @@
+@use './vars' as *;
+@use './mix' as *;
+@use './nav';
+
+
+#header {
+    width: 100%;
+    height: $header-h;
+    padding-top: $padding-m;
+    padding-bottom: $padding-m;
+    background-color: #fff;
+    position: sticky; 
+    top: 0; left: 0;
+    transition: 0.3s;
+    z-index: 9999;
+    &.scroll {      
+
+      box-shadow: 0 3px 5px rgb(233 233 233 / 30%);
+    }
+    .container {
+      @include flex(space-between, center);
+      height: 100%;
+      .logo {
+        img {
+          width: 100px;
+        }
+      }
+      .menu-icon {
+        display: inline-block;
+        font-size: 2.2rem;
+        color: $primery-color;
+        @media (min-width:$media-tab) {
+          display: none;
+        }
+      }
+    }
+}

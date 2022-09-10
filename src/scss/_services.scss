@@ -1,0 +1,76 @@
+@use './vars' as *;
+@use './mix' as *;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+#services {
+  padding: 50px 0;
+  .headings {
+    width: 650px;
+    max-width: 100%;
+    text-align: center;
+    margin: 2rem auto;
+    .title {
+      padding: 0.5rem;
+      font-size: 1.7rem;
+      font-weight: 600;
+      font-family: Quicksand;
+      text-transform: capitalize;
+      color: $heading-primer-color;
+    }
+    .desc {
+      line-height: 1.5;
+      padding: 0.5rem;
+      color: $paragraph-primery-color;
+    }
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    @media (min-width: $media-mob) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: $media-tab) {
+      grid-template-columns: repeat(3 ,  1fr);
+    }
+    .box {
+      .img-holder {
+        img {
+          border-radius: 15px;
+          width: 100%;
+        }
+      }
+      .desc {
+        border-bottom: 1px solid $sideMenuColor;
+        margin: 1rem 0 1rem 0;
+        padding: 0 0 1rem 0;
+        .title {
+          color: $heading-primer-color;
+          font-family: Quicksand;
+          font-weight: 700;
+          font-size: 1.2rem;
+        }
+        .detail {
+          margin: 10px 0;
+        }
+        .price {
+          span {
+            font-weight: 500;
+            font-size: 1.2rem;
+          }
+          .new-price {
+            color: $heading-color-sec;
+          }
+          .old-price {
+            margin: 0 7px;
+            color: $paragraph-primery-color;
+            text-decoration: line-through;
+          }
+        }
+      }
+      .btn {
+        @include btn (0.9rem , 2rem)
+      }
+    }
+  }
+}

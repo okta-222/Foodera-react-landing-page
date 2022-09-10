@@ -1,0 +1,24 @@
+@use './vars' as *;
+@use './config' as *;
+@use  './header';
+@use './hero';
+@use './sideMenu';
+@use './statics';
+@use './about';
+@use './video';
+@use './services';
+@use './reviews';
+@use './questions';
+@use './dailyEmail';
+@use './contact';
+@use './footer';
+
+.title {
+  @media (max-width: $media-mob) {
+    font-size: 1.5rem !important;
+  }
+}
+.lg-outer {
+  z-index: 99999999999 !important;
+  background: black !important;
+}

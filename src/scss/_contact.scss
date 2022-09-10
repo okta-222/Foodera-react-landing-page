@@ -1,0 +1,43 @@
+@use './vars' as *;
+@use './mix' as *;
+
+#contact {
+  padding: 50px 0;
+  position: relative;
+  height: auto;
+  .container {
+    .content {
+      width: 500px;
+      max-width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      @include flex(center, null  ,  null ,  20px , column);
+      .title {
+        font-family: $font-sec;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $heading-primer-color;
+        text-transform: capitalize;
+        @media (min-width: $media-tab) {
+          font-size: 2rem;
+        }
+      }
+      form {
+        @include flex(center, center  ,  null , 1.5rem , column);
+        @media (min-width: $media-tab) {
+          @include flex(space-between, center  ,  1.7rem , null , row   ,wrap);
+        }
+        input {
+          border: 2px solid #ddd;
+          outline: none;
+          padding: 0.9rem 2rem 0.9rem 0.8rem;
+          flex: 1;
+          width: 100%;
+        }
+        .btn {
+          @include btn(0.9rem , 2rem)
+        }
+      }
+    }
+  }
+}

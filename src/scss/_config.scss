@@ -1,0 +1,43 @@
+@use './vars' as *;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;800&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+
+}
+.container {
+  padding-right: $padding-m;
+  padding-left: $padding-m;
+  margin-right: auto;
+  margin-left: auto;
+  @media (min-width: 768px) {
+    & {
+      width: 750px;
+    }
+  }
+  @media (min-width: 922px) {
+    & {
+      width: 970px;
+    }
+  }
+  @media (min-width: 1200px) {
+    & {
+      width: 1170px;
+    }
+  }
+}

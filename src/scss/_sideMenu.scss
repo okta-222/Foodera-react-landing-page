@@ -1,0 +1,36 @@
+@use './vars' as *;
+@use './mix' as *;
+.sideMenu {
+  @media (max-width: $media-tab) {
+    position: fixed;
+    top: 96px; left: 0;
+    width: 100%;
+    height: fit-content;
+    z-index: 999999999;
+    background-color: #262626;
+    .container {
+      display: block;
+      .side-links {
+        .side-link {
+          cursor: pointer;
+          margin: 1.2rem 0;
+          .link {
+            width: fit-content;
+            @include flex(null, center);
+            font-weight: 500;
+            text-transform: capitalize;
+            color: $link-color;
+              .icon {
+                padding-right: 5px;
+                font-size: 1.2rem;
+              }
+              &.active {
+                  color: #dfdfdf;
+              }
+          }
+
+        }
+      }
+    }
+  }
+}

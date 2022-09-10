@@ -1,0 +1,42 @@
+@use './vars' as *;
+@use './mix';
+
+#video {
+  padding: 50px 0;
+  background-image: url('../imgs/05.jpg');
+  background-position: center;
+  background-size: cover;
+  background-color: $primery-color;
+  .container {
+    text-align: center;
+    .text {
+      width: 700px;
+      max-width: 100%;
+      margin: 0 auto;
+      .title {
+        color: $heading-color-sec;
+        font-size: 2rem;
+        font-weight: 500;
+      }
+      .desc {
+        margin: 1rem 0;
+        line-height: 1.5;
+        color: $paragraph-primery-color;
+      }
+      .lg-react-element  {
+        margin-top: 2.3rem;
+      }
+      .popup {
+        color: $link-color;
+        span {
+          font-size: 1.3rem;
+        }
+      }
+    }
+    @media (min-width: $media-mob) {
+      .title {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

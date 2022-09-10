@@ -1,0 +1,36 @@
+@use './vars' as *;
+@use './mix' as *;
+#footer {
+  padding: 50px 0;
+  background-color: $primery-color;
+  .container {
+    .content {
+      width: 500px;
+      max-width: 100%;
+      margin: 0 auto;
+      .links {
+        .link {
+          font-size: 1rem;
+          color: $white;
+          cursor: pointer;
+          text-transform: capitalize;
+        }
+      }
+      .social-icons {
+        margin: 1.5rem 0;
+        .icon {
+          font-size: 1.2rem;
+          color: $white;
+          cursor: pointer;
+        }
+      }
+      .flex {
+        @include flex(center , center , 20px  , null , row , wrap)
+      }
+      .copyright {
+        @include flex(center , center , 0.3rem);
+        color: $white;
+      }
+    }
+  }
+}

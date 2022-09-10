@@ -1,0 +1,25 @@
+@use  './mix' as *;
+@use './vars' as *;
+%nav-links {
+  flex-direction: column;
+  @include superFlex(start, null , null , 1.9rem);
+  position: fixed; top: $nav-h; left: 0;
+  width: 100%; height: fit-content;
+  background-color: white;
+  padding: 30px 15px;
+  @media (min-width: $media-tab) {
+    display: none;
+  }
+  a {
+    text-transform: capitalize;
+    color: $black;
+    font-weight: 400;
+    transition: $main-transition;
+    &.active {
+      color: $blue;
+    }
+    &:hover {
+      color: $blue;
+    }
+  }
+}
